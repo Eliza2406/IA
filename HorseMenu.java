@@ -70,8 +70,8 @@ public class HorseMenu
          }
          else if (choice==2) 
          {
-         
-            addHorse(horseArr);
+            HorseDriver2 addHorse = new HorseDriver2();
+            addHorse.AddHorse();
          
          }	
          
@@ -94,7 +94,7 @@ public class HorseMenu
       
       
       
-      }while( (choice >= 1 ) && (choice < 5)  ) ;   // loop on do-while loop
+      }while( (choice >= 1 ) && (choice < 6)  ) ;   // loop on do-while loop
      
    } // end menu method
 
@@ -104,8 +104,9 @@ public class HorseMenu
       String prompt =   "Welcome to Horse Board! \nPlease select from the following options: "
                         + "\n \n 1. View Horse Objects"
          				   + "\n 2. Add Horse to Data File"
-         				   + "\n 3. Calculate Revenue for Boarding Facility"
-                        + "\n 4. Quit "
+                        +"\n 3. Search for Horse "
+         				   + "\n 4. Calculate Revenue for Boarding Facility"
+                        + "\n 5. Quit "
                         + "\n";
    						
       System.out.print(prompt);
@@ -118,6 +119,7 @@ public class HorseMenu
      
    public static void viewHorse(HorseBoardRes3 [] arrayIn, int rec) 
    {
+         System.out.println("Data file has " + record  + " horse records\n");
         // Print array Objects to screen
       for(int index = 0; index < rec; index++)
       {
@@ -131,64 +133,7 @@ public class HorseMenu
    }
    
    
-   public static void addHorse(HorseBoardRes3 horseArr[]) throws IOException
-   { 
-   
-      Scanner keyIn = new Scanner(System.in);
-      
-      System.out.println("Welcome to Horse Board!" + "\n");
-   
-      System.out.print("Please enter the breed of the horse (press enter to continue): ");
-      String breed = keyIn.nextLine();
-       
-      System.out.print("Please enter the name of the horse: ");
-      String name = keyIn.nextLine();
-       
-      System.out.print("Please enter the name of the owner: ");
-      String owner = keyIn.nextLine();
-   
-      System.out.print("Please enter ID Number: ");
-      int idNum = keyIn.nextInt();
-       
-      System.out.print("Please enter the age of the horse: ");
-      int age = keyIn.nextInt();
-       
-      System.out.print("Please enter the weight of the horse: ");
-      double weight = keyIn.nextDouble();
-                     
-      System.out.print("Please enter the check-in date(yyyy-MM-dd): ");
-      String checkIn = keyIn.next();
-       
-      System.out.print("Please enter the check-out date(yyyy-MM-dd): ");
-      String checkOut = keyIn.next();
-   
-      HorseBoardRes3 newHorse = new HorseBoardRes3(breed, name, owner, idNum, age, weight, checkIn, checkOut);
-      System.out.println(newHorse);
-            
-      
-      for(int i = 0; i < horseArr.length; i++) {
-         if(horseArr[i] == (null))
-         {  
-            System.out.println(i);
-            horseArr[i] = newHorse;
-            break;
-         }
-      }
-      
-      FileOutputStream stream = new FileOutputStream("HorseData2.txt");
-      
-      PrintWriter out = new PrintWriter(stream);
-       
-      for(int j = 0; j < horseArr.length; j++) {
-         if (horseArr[j] == null) {
-            break;
-         }
-         out.println(horseArr[j].fileState());
-      }
-      
-      out.close();
-      
-   }
+  
 
      
      
