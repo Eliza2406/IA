@@ -1,0 +1,10 @@
+Palomino,Sparky,Liz Smith,101,4,1802.53,2022-08-29,2022-09-08
+Quarter,Jasper,John Walker,102,7,1795.24,2022-10-20,2022-10-31
+Thoroughbred,Spartan,Samantha White,103,2,1611.34,2023-01-04,2023-01-15
+Appaloosa,Dusty,Hannah Miller,104,6,1983.32,2023-02-19,2023-02-27
+Clydesdale,Dakota,Gregory Winston,105,3,2045.63,2023-03-31,2023-04-12
+Quarter,Nickel,Jess Mitchell,106,9,2184.0,2023-05-19,2023-05-29
+Thoroughbred,Skippy,Yeabsra Guetachew,107,2,850.98,2023-03-17,2023-04-17
+Quarter,Frenzia,Natalie Tucker,108,3,1039.54,2023-03-05,2023-04-25
+yoyo,Madoo,Madoo,1414,10,2.0,2023-03-20,2023-03-29
+Quarter,Nikki,Elizabeth Nichols,109,3,1039.43,2023-04-21,2023-04-29
